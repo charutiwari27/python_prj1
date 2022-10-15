@@ -1,0 +1,16 @@
+myList1 = [12, -7, 5, 64, -14]
+print(myList1)
+for i in range (0,4):
+    if myList1[i] < 0:
+        myList1.remove(myList1[i])
+print("Print positive numbers")
+print(myList1)
+
+myList2 = [12, 14, -95, 3]
+print("\n")
+print(myList2)
+for j in range (0,3):
+    if myList2[j] < 0:
+        myList2.remove(myList2[j])
+print("Print positive numbers")
+print(myList2)        
