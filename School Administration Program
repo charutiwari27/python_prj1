@@ -1,0 +1,39 @@
+import csv
+def csv_info (info):
+    with open('School_Administration.csv', 'a', newline='') as csv_file:
+        writer = csv.writer(csv_file)
+        
+        if csv_file.tell()==0:
+            writer.writerow(["Name", "Age", "Contact Number","E-Mail ID"])
+        
+        writer.writerow(info)  
+        
+if __name__ == '__main__':
+    
+    condition = True
+
+    while (condition):
+        #input from user
+        student_details = input("Enter details (Name, Age, Contact Number, E-mail) : " )
+        print ("Entered details : "+student_details)
+
+        #split
+        x = student_details.split()   
+        print ("Entered split information : " +str(x)) 
+        
+        csv_info(x)
+        
+        option = input("To continue adding information enter yes : ")
+        
+        if option == "yes": 
+            condition = True
+        
+        else:
+            condition = False
+            print("All information added")
+            
+
+    
+    
+    
+
